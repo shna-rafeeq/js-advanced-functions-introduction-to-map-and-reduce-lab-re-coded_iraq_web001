@@ -2,6 +2,7 @@
 let array = [1, 2, 3, -9];
 let dune = ["paul", "gurney", "vladimir", "jessica", "chani"]
 let  smallArr = [1,2,3]
+
 let boolArr = [ false,null,null,null, true]
 
 function mapToNegativize(sourceArray){
@@ -33,7 +34,7 @@ mapToDouble(array)
 function mapToSquare(sourceArray){
     let newArr=[]
   for(let i = 0; i < sourceArray.length; i++){
-    let result = sourceArray[i] ** 2;
+    let result = sourceArray[i] * sourceArray[i] ;
         newArr.push(result)
     }
  return newArr
@@ -52,6 +53,7 @@ reduceToTotal(smallArr)
 
 
 function reduceToAllTrue(sourceArray){
+
   for(let i = 0; i < sourceArray.length; i++){
     if(sourceArray[i] === false || sourceArray[i] === null || !sourceArray[i]){
       return false;
@@ -70,3 +72,14 @@ function reduceToAnyTrue(sourceArray){
   return false;
 }
 reduceToAnyTrue(boolSecond)
+
+  let result = true;
+  for(let i = 0; i < sourceArray.length; i++){
+    
+   result = result && sourceArray[i]
+
+  }
+  return result;
+}
+reduceToAllTrue(boolArr);
+
